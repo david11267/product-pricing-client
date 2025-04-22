@@ -2,14 +2,10 @@ import { Product } from '../interfaces/Product';
 
 interface Props {
   products: Product[];
-  setSelectedProducts: React.Dispatch<React.SetStateAction<never[]>>;
+  onToggle: (product: Product) => void;
 }
 
-export default function ProductsTable({ products }: Props) {
-  function ToggleChecked(): void {
-    throw new Error('Function not implemented.');
-  }
-
+export default function ProductsTable({ products, onToggle }: Props) {
   return (
     <div>
       <div className="flex flex-row-reverse">
@@ -29,19 +25,19 @@ export default function ProductsTable({ products }: Props) {
             <th>Id</th>
             <th>Name</th>
             <th>Price</th>
-            <th>Time</th>
+            <th>Posted</th>
           </tr>
         </thead>
         <tbody>
           {products.map(p => (
             <tr key={p.id}>
               <td>
-                <input onChange={() => ToggleChecked()} type="checkbox" />
+                <input onChange={() => onToggle(p)} type="checkbox" />
               </td>
-              <td>3</td>
-              <td>MacBookPro 2023 m2</td>
-              <td>5425kr</td>
-              <td> 2025-04-22-22:55</td>
+              <td>{p.id}</td>
+              <td>{p.name}</td>
+              <td>{p.price}</td>
+              <td>{p.posted.toLocaleString()}</td>
             </tr>
           ))}
         </tbody>
