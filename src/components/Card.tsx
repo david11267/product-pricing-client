@@ -5,7 +5,7 @@ interface Props {
 }
 export const Card = ({ children }: Props) => {
   return (
-    <div className="inline-flex flex-wrap bg-card/10 backdrop-filter backdrop-blur-xs  rounded-3xl shadow-lg  p-1">
+    <div className=" inline-flex contrast-200 bg-card/10  backdrop-filter backdrop-blur-md  rounded-3xl shadow-lg  p-1">
       {children}
     </div>
   );

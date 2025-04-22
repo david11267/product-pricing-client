@@ -12,7 +12,7 @@ export default function ProductsTable({ products, onToggle }: Props) {
         <input
           placeholder="Search"
           id="search"
-          className="m-1 text-center bg-white rounded-full"
+          className="m-1 text-center p-2 bg-white rounded-full"
           type="text"
         />
       </div>

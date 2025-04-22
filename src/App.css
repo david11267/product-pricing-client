@@ -17,8 +17,9 @@ body {
 body {
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url('./assets/dune-landscape.jpeg');
+  background-image: url('./assets/whiteSands.jpg');
   background-attachment: fixed;
+  backdrop-filter: blur(10px);
 }
 
 td {

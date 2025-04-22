@@ -87,23 +87,21 @@ function App() {
   }
 
   return (
-    <div className="  space-y-2 p-2 flex-col justify-items-center">
+    <div className="  space-y-2 p-2 flex-col justify-self-center">
       <NavBar />
 
       <div
-        className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 space-y-4"
+        className=" max-w-1/2 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 space-y-4"
         id="selectedProducts"
       >
         {selectedProducts.map(p => (
           <Card>
-            <div>
-              <h2>{p.name}</h2>
-              <img
-                className="selectedProductGridImage rounded-4xl m-2 contain-content"
-                src={p.imageUrl}
-                alt=""
-              />
-            </div>
+            <h2>{p.name}</h2>
+            <img
+              className="selectedProductGridImage rounded-4xl m-2 contain-content"
+              src={p.imageUrl}
+              alt=""
+            />
           </Card>
         ))}
       </div>
