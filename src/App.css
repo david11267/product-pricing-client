@@ -1,0 +1,25 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-card: oklch(0.808 0.073 228.7);
+  --color-primary: oklch(0.648 0.11 219);
+  --color-secondary: oklch(0.293 0.062 237);
+  --color-active: oklch(0.825 0.171 79.9);
+  --color-accent: oklch(0.734 0.179 56.1);
+}
+
+html,
+body {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('./assets/dune-landscape.jpeg');
+}
+
+td {
+  padding: 1rem;
+}
