@@ -18,6 +18,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url('./assets/dune-landscape.jpeg');
+  background-attachment: fixed;
 }
 
 td {

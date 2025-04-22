@@ -1,4 +1,15 @@
-export default function ProductsTable() {
+import { Product } from '../interfaces/Product';
+
+interface Props {
+  products: Product[];
+  setSelectedProducts: React.Dispatch<React.SetStateAction<never[]>>;
+}
+
+export default function ProductsTable({ products }: Props) {
+  function ToggleChecked(): void {
+    throw new Error('Function not implemented.');
+  }
+
   return (
     <div>
       <div className="flex flex-row-reverse">
@@ -22,33 +33,17 @@ export default function ProductsTable() {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>
-              <input type="checkbox" />
-            </td>
-            <td>3</td>
-            <td>MacBookPro 2023 m2</td>
-            <td>5425kr</td>
-            <td> 2025-04-22-22:55</td>
-          </tr>
-          <tr>
-            <td>
-              <input type="checkbox" />
-            </td>
-            <td>3</td>
-            <td>MacBookPro 2023 m2</td>
-            <td>5425kr</td>
-            <td> 2025-04-22-22:55</td>
-          </tr>{' '}
-          <tr>
-            <td>
-              <input type="checkbox" />
-            </td>
-            <td>3</td>
-            <td>MacBookPro 2023 m2</td>
-            <td>5425kr</td>
-            <td> 2025-04-22-22:55</td>
-          </tr>
+          {products.map(p => (
+            <tr key={p.id}>
+              <td>
+                <input onChange={() => ToggleChecked()} type="checkbox" />
+              </td>
+              <td>3</td>
+              <td>MacBookPro 2023 m2</td>
+              <td>5425kr</td>
+              <td> 2025-04-22-22:55</td>
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>
